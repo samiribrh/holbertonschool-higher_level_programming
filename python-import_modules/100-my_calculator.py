@@ -9,15 +9,15 @@ if __name__ == "__main__":
     num1 = int(argv[1])
     num2 = int(argv[3])
     operator = argv[2]
-    match operator:
-        case '+':
-            print("{} + {} = {}".format(num1, num2, add(num1, num2)))
-        case '-':
-            print("{} - {} = {}".format(num1, num2, sub(num1, num2)))
-        case '*':
-            print("{} * {} = {}".format(num1, num2, mul(num1, num2)))
-        case '/':
-            print("{} / {} = {}".format(num1, num2, div(num1, num2)))
-        case _:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+    if operator == '+':
+        print("{} + {} = {}".format(num1, num2, add(num1, num2)))
+    elif operator == '-':
+        print("{} - {} = {}".format(num1, num2, sub(num1, num2)))
+    elif operator == '*':
+        print("{} * {} = {}".format(num1, num2, mul(num1, num2)))
+    elif operator == '/':
+        print("{} / {} = {}".format(num1, num2, div(num1, num2)))
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
