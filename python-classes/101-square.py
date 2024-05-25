@@ -57,6 +57,7 @@ class Square:
         else:
             square = "\n" * self.__position[1]
             for i in range(self.__size - 1):
-                square += str(self.__position[0] * " " + self.size * "#" + "\n")
+                square += str(self.__position[0] * " " +
+                              self.size * "#" + "\n")
             square += str(self.__position[0] * " " + self.size * "#")
             return square
