@@ -6,8 +6,8 @@ class Square:
     """A class representing Square"""
     def __init__(self, size=0, position=(0, 0)):
         """Instantiation with a given size"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -31,7 +31,7 @@ class Square:
     @position.setter
     def position(self, value):
         """Setter for the position of the square"""
-        if not (len(value) == 2 and isinstance(value, tuple) and
+        if not (isinstance(value, tuple) and len(value) == 2 and
                 all(isinstance(num, int) for num in value) and
                 all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
