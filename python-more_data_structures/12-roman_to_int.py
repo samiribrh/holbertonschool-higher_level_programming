@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
-        return None
+        return 0
     rom_to_num = {
         'M': 1000,
         'D': 500,
