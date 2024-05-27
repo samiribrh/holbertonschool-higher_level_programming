@@ -7,8 +7,8 @@ def matrix_divided(matrix, div):
 
     # Checking if matrix is a list and its elements is lists containing ints
     if not all(isinstance(matrix, list)
-               and
-               all(isinstance(num, (int, float)) for num in row) for row in matrix):
+               and all(isinstance(num, (int, float))
+                       for num in row) for row in matrix):
         raise TypeError("matrix must be a matrix "
                         "(list of lists) of integers/floats")
 
