@@ -6,8 +6,10 @@ def matrix_divided(matrix, div):
     """Function for dividing all the elements of matrix"""
 
     # Checking if matrix is a list and its elements is lists containing ints
-    if not all(isinstance(matrix, list) and all(isinstance(num, (int, float)) for num in row) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(isinstance(matrix, list) and
+               all(isinstance(num, (int, float)) for num in row) for row in matrix):
+        raise TypeError("matrix must be a matrix "
+                        "(list of lists) of integers/floats")
 
     # Checking if all rows containing same number of elements
     if not all(len(row) == len(matrix[0]) for row in matrix):
