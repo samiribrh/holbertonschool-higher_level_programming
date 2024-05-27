@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module for function of adding integer"""
 
-import math
+
 def add_integer(a, b=98):
     """Adding integers function"""
 
