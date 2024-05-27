@@ -21,3 +21,13 @@ Traceback (most recent call last):
   File "./0-add_integer.py", line 24, in <module>
     add_integer()
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer(float('inf'), float('inf'))
+Traceback (most recent call last):
+  File "./0-add_integer.py", line 16, in add_integer
+    a = int(a)
+        ^^^^^^
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(2)
+100
