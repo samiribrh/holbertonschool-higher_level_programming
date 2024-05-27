@@ -18,4 +18,9 @@ TypeError: a must be an integer
 
 >>> add_integer(,)
 Traceback (most recent call last):
-TypeError: add_integer() missing 1 required positional argument: 'a'
+      File "/usr/lib/python3.9/doctest.py", line 1336, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 0-add_integer.txt[6]>", line 1
+        add_integer(,)
+                    ^
+    SyntaxError: invalid syntax
