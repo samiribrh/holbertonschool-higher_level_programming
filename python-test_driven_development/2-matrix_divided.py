@@ -29,7 +29,7 @@ def matrix_divided(matrix, div):
     for row in matrix:
         new_row = []
         for element in row:
-            new_row.append(element / div)
+            new_row.append(round(element / div, 2))
         new_matrix.append(new_row)
 
     # Return new matrix
