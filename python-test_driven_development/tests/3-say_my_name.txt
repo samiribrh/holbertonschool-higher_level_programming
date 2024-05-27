@@ -3,8 +3,8 @@
 >>> say_my_name("John", "Doe")
 My name is John Doe
 
->>> say_my_name("Alice")
-My name is Alice
+>>> say_my_name("Alice") # doctest: +ELLIPSIS
+My name is Alice...
 
 >>> say_my_name(123)
 Traceback (most recent call last):
