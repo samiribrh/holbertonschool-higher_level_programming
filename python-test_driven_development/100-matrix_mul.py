@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module containing matrix_mul function"""
-import numpy as np
+
 
 def matrix_mul(m_a, m_b):
     """Function for multiplying two matrices"""
@@ -48,5 +48,3 @@ def matrix_mul(m_a, m_b):
             for k in range(cols_a):
                 result[i][j] += m_a[i][k] * m_b[k][j]
     return result
-
-
