@@ -36,4 +36,4 @@ def lazy_matrix_mul(m_a, m_b):
         raise ValueError("shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)")
 
     # Multiplication part
-    return np.dot(m_a, m_b)
+    return np.matmul(m_a, m_b)
