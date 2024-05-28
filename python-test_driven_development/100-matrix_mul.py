@@ -24,9 +24,9 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_b can't be empty")
 
     # Checking if lists in m_a and m_b contains other than int or float
-    if not all((isinstance(num, (int, float)) for num in row) for row in m_a):
+    if not all(isinstance(num, (int, float)) for row in m_a for num in row):
         raise TypeError("m_a should contain only integers or floats")
-    if not all((isinstance(num, (int, float)) for num in row) for row in m_b):
+    if not all(isinstance(num, (int, float)) for row in m_b for num in row):
         raise TypeError("m_b should contain only integers or floats")
 
     # Checking if m_a or m_b is not rectangle
