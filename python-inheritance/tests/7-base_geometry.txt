@@ -33,4 +33,4 @@ Exception: area() is not implemented
 >>> BaseGeometry.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
