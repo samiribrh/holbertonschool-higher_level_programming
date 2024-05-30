@@ -13,7 +13,7 @@ class BaseGeometry:
         """Method to validate value"""
 
         # Checking if value is not an int
-        if not type(value) is not int:
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
 
         # Checking if value is not less or equal to 0
