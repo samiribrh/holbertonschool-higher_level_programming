@@ -21,5 +21,6 @@
 >>> my_list.append("salam")
 >>> my_list.append("1")
 >>> new_list = my_list.print_sorted()
->>> print(new_list)
 ['1', 'salam']
+>>> print(new_list)
+None
