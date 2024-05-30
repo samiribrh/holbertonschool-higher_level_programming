@@ -7,16 +7,16 @@
 >>> integer_validator("test", 0)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: test must be greater than 0
 >>> integer_validator("test", -5)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: test must be greater than 0
 >>> integer_validator("test", 3.14)
 Traceback (most recent call last):
 ...
-TypeError: <name> must be an integer
+TypeError: test must be an integer
 >>> integer_validator("test", "hello")
 Traceback (most recent call last):
 ...
-TypeError: <name> must be an integer
+TypeError: test must be an integer
