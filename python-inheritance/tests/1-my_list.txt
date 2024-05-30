@@ -27,4 +27,4 @@
 None
 
 >>> print(my_list)
-['1', 'salam']
+['salam', '1']
