@@ -34,3 +34,8 @@ Exception: area() is not implemented
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> geometry.integer_validator("age", (4,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
