@@ -18,4 +18,4 @@ class BaseGeometry:
 
         # Checking if value is not less or equal to 0
         if value <= 0:
-            raise ValueError("{} must be an integer".format(name))
+            raise ValueError("{} must be greater than 0".format(name))
