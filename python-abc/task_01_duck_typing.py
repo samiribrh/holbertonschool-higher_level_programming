@@ -23,7 +23,7 @@ class Circle(Shape):
 
     def __init__(self, radius):
         """Initialization wih radius"""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Returning duck area"""
