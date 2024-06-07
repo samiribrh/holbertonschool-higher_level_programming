@@ -23,12 +23,9 @@ class CustomObject:
         if not filename:
             return None
 
-        # Serializing the data
-        content = pickle.dumps(self)
-
         # Writing serialized data to the file
         with open(filename, 'wb') as file:
-            file.write(content)
+            pickle.dump(self, file)
 
     @classmethod
     def deserialize(cls, filename):
@@ -40,7 +37,4 @@ class CustomObject:
 
         # Reading file content for deserialization
         with open(filename, 'rb') as file:
-            content = file.read()
-
-        # Returning deserialized data
-        return pickle.loads(content)
+            return pickle.load(file)
