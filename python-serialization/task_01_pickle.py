@@ -20,7 +20,7 @@ class CustomObject:
         """Method to serialize the Object and write it to the file"""
 
         # None file case
-        if not any(filename):
+        if not filename:
             return None
 
         # Serializing the data
@@ -35,7 +35,7 @@ class CustomObject:
         """Method to deserialize the Object from file"""
 
         # None file case
-        if not any(filename):
+        if not filename:
             return None
 
         # Reading file content for deserialization
