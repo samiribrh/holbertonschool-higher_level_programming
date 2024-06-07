@@ -13,7 +13,8 @@ class Student:
 
     def to_json(self, attrs=None):
         """Method to retrieve dict of the class"""
-        if isinstance(attrs, list) and all(isinstance(element, str) for element in attrs):
+        if isinstance(attrs, list) and \
+                all(isinstance(element, str) for element in attrs):
             new_dict = dict()
             for i in attrs:
                 if i in self.__dict__:
