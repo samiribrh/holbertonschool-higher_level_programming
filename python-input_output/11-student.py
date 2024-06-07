@@ -12,7 +12,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Method to retrieve dict of the class"""
+        """Method to retrieve dict elements of the class"""
         if isinstance(attrs, list) and \
                 all(isinstance(element, str) for element in attrs):
             new_dict = dict()
@@ -21,3 +21,10 @@ class Student:
                     new_dict[i] = self.__dict__[i]
             return new_dict
         return self.__dict__
+
+    def reload_from_json(self, json):
+        """Method to change JSON"""
+        for key in self.__dict__.keys():
+            for key2 in json.keys():
+                if key == key2:
+                    self.__dict__[key] = json[key2]
