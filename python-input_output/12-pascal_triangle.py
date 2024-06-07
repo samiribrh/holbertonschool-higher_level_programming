@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module containing pascal_triangle func"""
+
+
 def pascal_triangle(n):
     """Function to return Pascal's triangle"""
     # Checking n <= 0 case
