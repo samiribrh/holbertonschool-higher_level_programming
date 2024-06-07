@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Module containing pickle module and CustomObject"""
-import pickle
 
 
 class CustomObject:
@@ -18,23 +17,24 @@ class CustomObject:
 
     def serialize(self, filename):
         """Method to serialize the Object and write it to the file"""
+        import pickle
 
-        # None file case
-        if not filename:
-            return None
-
-        # Writing serialized data to the file
-        with open(filename, 'wb') as file:
-            pickle.dump(self, file)
+        try:
+            # Writing serialized data to the file
+            with open(filename, 'wb') as file:
+                pickle.dump(self, file)
+        except Exception as e:
+            print("Error occurred:", e)
 
     @classmethod
     def deserialize(cls, filename):
         """Method to deserialize the Object from file"""
+        import pickle
 
-        # None file case
-        if not filename:
+        try:
+            # Reading file content for deserialization
+            with open(filename, 'rb') as file:
+                return pickle.load(file)
+        except Exception as e:
+            print("Error occurred:", e)
             return None
-
-        # Reading file content for deserialization
-        with open(filename, 'rb') as file:
-            return pickle.load(file)
