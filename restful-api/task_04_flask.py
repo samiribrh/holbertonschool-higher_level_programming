@@ -19,6 +19,8 @@ def data():
 @app.route('/add_user', methods=['POST'])
 def add_user():
     data = request.json
+    if data is None or data.get('username') is None:
+        return jsonify({'error': 'username is not defined'}), 400
     user = {
         'username': data.get('username'),
         'name': data.get('name'),
