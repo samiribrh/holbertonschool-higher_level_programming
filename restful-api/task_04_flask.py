@@ -20,7 +20,7 @@ def data():
 def add_user():
     data = request.json
     if data is None or data.get('username') is None:
-        return jsonify({'error': 'username is not defined'}), 400
+        return jsonify({'error': 'Username is required'}), 400
     user = {
         'username': data.get('username'),
         'name': data.get('name'),
@@ -39,7 +39,7 @@ def status():
 @app.route('/users/<username>')
 def username(username):
     if username is None:
-        return jsonify({'error': 'username is not defined'}), 400
+        return jsonify({'error': 'Username is required'}), 400
     if username not in users:
         return jsonify({"error": "User not found"}), 404
     return jsonify(users[username])
