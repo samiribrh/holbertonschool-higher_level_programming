@@ -28,7 +28,7 @@ def add_user():
         'city': data.get('city')
     }
     users[user.get('username')] = user
-    return jsonify({'message': 'User added'}), 201
+    return jsonify({'message': 'User added', 'user': user}), 201
 
 
 @app.route('/status')
