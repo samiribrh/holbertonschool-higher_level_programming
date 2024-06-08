@@ -32,6 +32,14 @@ class HTTPHandler(http.server.BaseHTTPRequestHandler):
             self._set_headers()
             self.wfile.write("OK".encode('utf-8'))
 
+        elif self.path == '/info':
+            self._set_headers(content_type='application/json')
+            data = {
+                "version": "1.0",
+                "description": "A simple API built with http.server"
+            }
+            self.wfile.write(json.dumps(data).encode('utf-8'))
+
         # Error 404 :)
         else:
             self.send_error(404, "Page Not Found")
