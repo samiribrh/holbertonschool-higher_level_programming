@@ -24,7 +24,11 @@ class HTTPHandler(http.server.BaseHTTPRequestHandler):
         # If /data is accessed
         elif self.path == '/data':
             self._set_headers(content_type='application/json')
-            data = {"name": "John", "age": 30, "city": "New York"}
+            data = {
+                "name": "John",
+                "age": 30,
+                "city": "New York"
+            }
             self.wfile.write(json.dumps(data).encode('utf-8'))
 
         # /status endpoint
@@ -50,9 +54,3 @@ if __name__ == '__main__':
     server_address = ('', 8000)
     httpserver = http.server.HTTPServer(server_address, HTTPHandler)
     httpserver.serve_forever()
-
-
-
-
-
-
