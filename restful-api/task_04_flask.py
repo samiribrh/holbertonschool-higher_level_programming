@@ -36,6 +36,10 @@ def status():
 
 @app.route('/users/<username>')
 def username(username):
+    if username is None:
+        return jsonify({'error': 'username is not defined'}), 400
+    if username not in users:
+        return jsonify({"error": "User does not exist"}), 404
     return jsonify(users[username])
 
 
