@@ -47,6 +47,8 @@ class HTTPHandler(http.server.BaseHTTPRequestHandler):
         # Error 404 :)
         else:
             self.send_error(404, "Endpoint not found")
+            self._set_headers(404, 'text/plain')
+            self.wfile.write("404 Not Found: The requested resource was not found on this server.".encode('utf-8'))
 
 
 if __name__ == '__main__':
