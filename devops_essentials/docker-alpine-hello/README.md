@@ -1,3 +1,3 @@
 **Overview:**
 
-This directory consists of Alpine essentials.
+This directory consists of Alpine for Hello, World!.
