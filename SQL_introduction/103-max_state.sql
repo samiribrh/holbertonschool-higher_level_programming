@@ -5,4 +5,6 @@ SELECT
 FROM
     temperatures
 GROUP BY
-    state;
+    state
+ORDER BY
+    state DESC;
