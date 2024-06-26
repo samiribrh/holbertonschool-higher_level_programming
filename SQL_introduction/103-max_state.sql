@@ -7,4 +7,4 @@ FROM
 GROUP BY
     state
 ORDER BY
-    state DESC;
+    state;
