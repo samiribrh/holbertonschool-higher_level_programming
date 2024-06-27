@@ -15,4 +15,4 @@ WHERE
             name = 'California'
         )
 ORDER BY
-    id;
+    id ASC;
