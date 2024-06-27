@@ -4,10 +4,10 @@ SELECT
     cities.name,
     states.name
 FROM
-    cities c
-INNER JOIN
-    states s
+    cities
+JOIN
+    states
 ON
-    s.id = c.state_id
+    states.id = cities.state_id
 ORDER BY
     cities.id ASC;
