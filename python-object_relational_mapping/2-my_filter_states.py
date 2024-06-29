@@ -10,11 +10,10 @@ if __name__ == '__main__':
         password=argv[2],
         database=argv[3]
     )
-    name = argv[4]
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id".format(name))
+    cursor.execute("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id".format(argv[4]))
 
     for state in cursor.fetchall():
         print(state)
