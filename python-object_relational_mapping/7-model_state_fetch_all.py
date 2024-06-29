@@ -2,17 +2,23 @@
 """Module for fetching all states from the database using SQLAlchemy ORM."""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-import sys
+from sys import argv
 
-from model_state import State
+from model_state import Base, State
 
 # Run only executed
 if __name__ == "__main__":
 
+    if len(argv) != 4:
+        raise "Usage: {} <mysql_username> <mysql_password> <database_name>".format(argv[0])
+
     # Engine creation with mysql and mysqldb DBAPI
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                           .format(argv[1], argv[2], argv[3]),
                            pool_pre_ping=True)
+
+    # Creating all classes in DB
+    Base.metadata.create_all(engine)
 
     # Creating Session and its instance
     Session = sessionmaker(bind=engine)
