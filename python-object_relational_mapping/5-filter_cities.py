@@ -16,9 +16,12 @@ if __name__ == '__main__':
                     FROM cities AS c \
                     INNER JOIN states AS s ON s.id = c.state_id ')
 
-    for state in cursor.fetchall():
-        if state[1] == argv[4]:
-            print(state[0])
+    cities = []
+    for city in cursor.fetchall():
+        if city[1] == argv[4]:
+            cities.append(city[0])
+
+    print(", ".join(cities))
 
     if cursor:
         cursor.close()
