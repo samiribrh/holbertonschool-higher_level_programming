@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
 
-    cursor.execute(f'SELECT * FROM states WHERE name = {name} ORDER BY id')
+    cursor.execute(f"SELECT * FROM states WHERE name = '{name}' ORDER BY id")
 
     for state in cursor.fetchall():
         print(state)
