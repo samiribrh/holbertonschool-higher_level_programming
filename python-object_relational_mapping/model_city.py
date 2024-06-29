@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Module containing City class"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
