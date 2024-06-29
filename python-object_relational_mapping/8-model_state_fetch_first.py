@@ -22,12 +22,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Printing the result
+    # The Query
     state = session.query(State).order_by(State.id).first()
+
+    # Printing the result
     if state is None:
         print("Nothing")
     else:
-        print("1: {}".format(state))
+        print("1: {}".format(state.name))
 
     # Closing the session
     if session:
