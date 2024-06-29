@@ -12,7 +12,9 @@ if __name__ == '__main__':
     )
     cursor = db.cursor()
 
-    cursor.execute('SELECT * FROM cities')
+    cursor.execute('SELECT c.id, c.name, s.name \
+                    FROM cities AS c \
+                    INNER JOIN states AS s ON s.id = c.state_id ')
 
     for state in cursor.fetchall():
         print(state)
