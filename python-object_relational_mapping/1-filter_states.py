@@ -15,7 +15,7 @@ if __name__ == '__main__':
     cursor.execute('SELECT * FROM states ORDER BY id')
 
     for state in cursor.fetchall():
-        if state[0][1] == 'N':
+        if state[1][0] == 'N':
             print(state)
 
     if cursor:
