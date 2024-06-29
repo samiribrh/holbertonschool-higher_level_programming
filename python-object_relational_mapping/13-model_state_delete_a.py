@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for New Mexico update.
+Module for deleting all the cities with 'a'.
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -22,8 +22,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Changing state name to New Mexico
-    session.query(State).filter(State.id == 2).update({"name": "New Mexico"})
+    # Deleting everything with a
+    for state in session.query(State).filter(State.name.like('%a%')).all():
+        session.delete(state)
     session.commit()
 
     # Closing the session
