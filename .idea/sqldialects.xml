@@ -2,5 +2,16 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/SQL_introduction/0-list_databases.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/1-create_database_if_missing.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/10-top_score.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/12-no_cheating.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/16-no_link.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/2-remove_database.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/3-list_tables.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/4-first_table.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/7-insert_value.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/8-count_89.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_introduction/9-full_creation.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/SQL_more_queries/4-never_empty.sql" dialect="MySQL" />
   </component>
 </project>
