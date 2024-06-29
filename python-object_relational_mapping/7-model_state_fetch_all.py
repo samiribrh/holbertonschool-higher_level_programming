@@ -9,9 +9,6 @@ from model_state import Base, State
 # Run only executed
 if __name__ == "__main__":
 
-    if len(argv) != 4:
-        raise ValueError("Usage: {} <mysql_username> <mysql_password> <database_name>".format(argv[0]))
-
     # Engine creation with mysql and mysqldb DBAPI
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
                            .format(argv[1], argv[2], argv[3]),
