@@ -10,7 +10,7 @@ from model_state import Base, State
 if __name__ == "__main__":
 
     if len(argv) != 4:
-        raise "Usage: {} <mysql_username> <mysql_password> <database_name>".format(argv[0])
+        raise ValueError("Usage: {} <mysql_username> <mysql_password> <database_name>".format(argv[0]))
 
     # Engine creation with mysql and mysqldb DBAPI
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
