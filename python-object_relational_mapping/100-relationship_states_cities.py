@@ -10,7 +10,7 @@ from sys import argv
 # Run only when executed
 if __name__ == "__main__":
     # Creating the engine
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
                            .format(argv[1], argv[2], argv[3]))
 
     # Binding the database
@@ -21,7 +21,10 @@ if __name__ == "__main__":
     session = Session()
 
     # Adding new city and state
-    session.add(City(name="San Francisco", state=State(name="California")))
+    new_state = State(name="California")
+    new_city = City(name="San Francisco", state=new_state)
+    session.add(new_state)
+    session.add(new_city)
 
     # Commiting changes
     session.commit()
