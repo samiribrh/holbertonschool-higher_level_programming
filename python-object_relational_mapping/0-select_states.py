@@ -3,9 +3,9 @@
 
 if __name__ == '__main__':
     from sys import argv
-    import mysql.connector
+    import MySQLdb
 
-    db = mysql.connector.connect(
+    db = MySQLdb.connect(
         user=argv[1],
         password=argv[2],
         database=argv[3]
