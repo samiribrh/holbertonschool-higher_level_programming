@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for fetching all states containing letter 'a' from the database using SQLAlchemy ORM.
+Module for fetching all states containing letter 'a'.
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -23,7 +23,9 @@ if __name__ == "__main__":
     session = Session()
 
     # Printing the result
-    for state in session.query(State).filter(State.name.like('%a%')).order_by(State.id):
+    for state in (session.query(State)
+                  .filter(State.name.like('%a%'))
+                  .order_by(State.id)):
         print("{}: {}".format(state.id, state.name))
 
     # Closing the session
