@@ -21,10 +21,7 @@ if __name__ == "__main__":
     session = Session()
 
     # Adding new city and state
-    new_state = State(name="California")
-    new_city = City(name="San Francisco", state_id=new_state.id)
-    session.add(new_state)
-    session.add(new_city)
+    session.add(City(name="San Francisco", state=State(name="California")))
 
     # Commiting changes
     session.commit()
