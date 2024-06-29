@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for fetching all states containing letter 'a'.
+Module for adding Louisiana.
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -22,11 +22,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Printing the result
-    for state in (session.query(State)
-                  .filter(State.name.like('%a%'))
-                  .order_by(State.id)):
-        print("{}: {}".format(state.id, state.name))
+    # Creating new city instance and adding it do db
+    session.query(State).filter(State.id == 2).update({"name": "New Mexico"})
+    session.commit()
 
     # Closing the session
     if session:
