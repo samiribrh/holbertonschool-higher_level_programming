@@ -1,6 +1,14 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
 
-{% block content %}
+<head>
+    <meta charset="utf-8">
+    <title>My Flask App</title>
+</head>
+
+<body>
+    {% include 'header.html' %}
+
     <h1>Welcome to My Flask App</h1>
     <p>This is a simple Flask application.</p>
     <ul>
@@ -8,4 +16,8 @@
         <li>HTML</li>
         <li>Templates</li>
     </ul>
-{% endblock %}
+
+    {% include 'footer.html' %}
+</body>
+
+</html>
