@@ -27,10 +27,10 @@ def generate_invitations(template, attendees_list):
         for key, value in attendee.items():
             placeholder = "{" + f"{key}" + "}"
             if not value:
-                value = f"{key}:N/A"
+                value = "N/A"
             template_schema = template_schema.replace(placeholder, value)
         if not exists(f"output_{index}.txt"):
             with open(f"output_{index}.txt", "w") as file:
                 file.write(template_schema)
         else:
-            print("ERROR: File already exists")
+            print("ERROR: file already exists")
