@@ -1,4 +1,4 @@
-"""Module containing python script for Jinja2 module"""
+"""Module containing python script for sending invitations"""
 from os.path import exists
 
 
